@@ -1,5 +1,4 @@
-// Hit testing.
-// scores.
+// TODO: Can't chage speed of enemy. It will break.
 
 let blaster;
 let bullets = [];
@@ -124,7 +123,7 @@ function draw() {
 
   for (let i = 0; i < enemies.length; i++) {
     let frameSinceHit = frameCount - enemies[i].hitCount;
-    if (frameSinceHit < 48) {
+    if (frameSinceHit < 48 && enemies[i].hitCount) {
       drawBomb(frameSinceHit, enemies[i].x - 50, enemies[i].y - 50);
     }
   }
