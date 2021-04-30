@@ -6,6 +6,8 @@ class shooter {
   }
 
   draw() {
-    image(spaceShip, this.x, this.y, 50, 50);
+    if (!this.hitCount) {
+      image(spaceShip, this.x, this.y, 50, 50);
+    }
   }
 }

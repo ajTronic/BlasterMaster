@@ -21,7 +21,7 @@ function setup() {
   blaster = new shooter(width / 2, height - 100);
   fill(200);
   enemies.push(new enemy(random(width), 50, 1));
-
+  noCursor();
   // let arr = [7, 5, 6, 8, 1, 8, 9, 1];
   // bubblesort(arr, 0, 1);
   // print(arr);
@@ -59,6 +59,7 @@ function draw() {
     const e = enemies[i];
     if (dist(blaster.x, blaster.y, e.x, e.y) < 50) {
       gameOver = true;
+      e.hidden = true;
       if (!blaster.hitCount) {
         blaster.hitCount = frameCount;
       }
