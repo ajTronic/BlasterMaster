@@ -56,7 +56,7 @@ function draw() {
 
   for (let i = 0; i < enemies.length; i++) {
     const e = enemies[i];
-    if (dist(blaster.x, blaster.y, e.x, e.y) < 50) {
+    if (dist(blaster.x, blaster.y, e.x, e.y) < 50 && !e.hidden) {
       gameOver = true;
       e.hidden = true;
       if (!blaster.hitCount) {
