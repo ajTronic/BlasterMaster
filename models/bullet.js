@@ -9,7 +9,7 @@ class bullet {
 
   draw() {
     if (this.exists === true) {
-      fill(20, 200, 50)
+      fill(255, 200, 50)
       circle(this.x + 15, this.y, 5);
       circle(this.x + 35, this.y, 5);
       circle(this.x + 25, this.y, 10);
